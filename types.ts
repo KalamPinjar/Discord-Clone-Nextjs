@@ -8,7 +8,7 @@ export type ServerWithMembersWithProfile = Server & {
   })[];
 };
 
-export type NextApiResponeServerIo = NextApiResponse & {
+export type NextApiResponseServerIo = NextApiResponse & {
   socket: Socket & {
     server: NetServer & {
       io: SocketIOServer;
