@@ -7,7 +7,7 @@ interface ChatWelcomeProps {
 
 const ChatWelcome = ({ type, name }: ChatWelcomeProps) => {
   return (
-    <div className="space-y-2 mb-4 px-4">
+    <div className="flex flex-col justify-end space-y-2 px-4 py-4 h-full">
       {type === "channel" && (
         <div className="flex justify-center items-center bg-zinc-500 dark:bg-zinc-700 rounded-full w-[75px] h-[75px] overflow-hidden">
           <Hash className="w-12 h-12 text-white" />

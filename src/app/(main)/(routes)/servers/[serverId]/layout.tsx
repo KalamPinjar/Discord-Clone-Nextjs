@@ -1,7 +1,6 @@
 import { ServerSideBar } from "@/components/server/server-sidebar";
 import { currentProfile } from "@/lib/current-profile";
 import { db } from "@/lib/db";
-import { RedirectToSignIn } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 
 const ServerLayout = async ({
@@ -31,11 +30,11 @@ const ServerLayout = async ({
     return redirect("/");
   }
   return (
-    <div className="h-full">
+    <div className="h-screen">
       <div className="z-20 fixed inset-y-0 md:flex flex-col hidden w-60 h-full">
         <ServerSideBar serverId={params.serverId} />
       </div>
-      <main className="md:pl-60 h-screen">{children}</main>
+      <main className="md:pl-60">{children}</main>
     </div>
   );
 };
